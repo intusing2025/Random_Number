@@ -9,7 +9,7 @@ class number extends JPanel implements ActionListener {
     private int[] x;          // x positions
     private int[] y;          // y positions
     private int[] dy;         // velocities
-    private int diameter = 40;
+    private int position = 40;
     private Timer timer;
     private boolean ini=false;
     Random r=new Random();
@@ -34,8 +34,8 @@ class number extends JPanel implements ActionListener {
         // Initialize each ball with different positions and velocities
         for (int i = 0; i < numBalls; i++)
         {
-            x[i] = 10 + i * diameter;   // spread horizontally
-            y[i] = (i*diameter);                // stagger vertically
+            x[i] = 10 + i * position;   // spread horizontally
+            y[i] = (i*position);                // stagger vertically
             dy[i] = 2;                     // different speeds
         }
         ini=true;
@@ -83,7 +83,7 @@ class number extends JPanel implements ActionListener {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Bounce Balls");
+        JFrame frame = new JFrame("Falling Numbers");
         number animation = new number();
         frame.add(animation);
         frame.setSize(600, 600);
