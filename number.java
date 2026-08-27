@@ -6,9 +6,9 @@ import java.util.Random;
 
 class number extends JPanel implements ActionListener {
     private int numBalls = 14;
-    private int[] x;          // x positions
-    private int[] y;          // y positions
-    private int[] dy;         // velocities
+    private int[] x;
+    private int[] y;
+    private int[] dy;
     private int position = 40;
     private Timer timer;
     private boolean ini=false;
@@ -22,7 +22,7 @@ class number extends JPanel implements ActionListener {
         dy = new int[numBalls];
         randomNum= new int[numBalls];
 
-        timer = new Timer(1, this); // smoother animation
+        timer = new Timer(1, this);
         timer.start();
     }
     
@@ -34,9 +34,9 @@ class number extends JPanel implements ActionListener {
         // Initialize each ball with different positions and velocities
         for (int i = 0; i < numBalls; i++)
         {
-            x[i] = 10 + i * position;   // spread horizontally
-            y[i] = (i*position);                // stagger vertically
-            dy[i] = 2;                     // different speeds
+            x[i] = 10 + i * position;
+            y[i] = (i*position);
+            dy[i] = 2;
         }
         ini=true;
     }
